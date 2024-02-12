@@ -1,0 +1,78 @@
+
+.drawer{
+    width: 30%;
+   background-color: #ffffff;
+   box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+   height: 80vh;
+}
+
+.drawer-container{
+    margin-top: 15px;
+}
+
+
+.searchbox
+{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.searchbox > div:nth-child(2){
+    width: 60%;
+  position: relative;
+
+}
+.searchbox > div:nth-child(2) > button{
+    width: 100%;
+    padding: 8px;
+    background-color: rgb(212, 20, 52) ;
+    outline: none;
+    border: none;
+cursor: pointer;
+color: #ffffff;
+border-radius: 15px;
+}
+.cat-amt{
+    width:85%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+  
+    justify-content: space-between;
+    margin-top: 10px;
+}
+.cat-amt div {
+  width: 100%;
+ 
+}
+.cat-amt button{
+    width: 100%;
+    padding: 5px;
+    border: none;
+    outline: none;
+
+}
+
+.prodet{
+    border: 1px solid white;
+    cursor: pointer;
+}
+.prodet :hover{
+    background-color: #F5F5F5;
+}
+.prodet{
+    width: 85%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: auto;
+    padding: 5px;
+}
+.prodet > div{
+    display: flex;
+    align-items: center;
+}
+.prodet > div > p{
+    margin-right: 4px;
+}
+

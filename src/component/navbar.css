@@ -1,0 +1,66 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+  
+  .navbar {
+    width: 100%;
+  }
+  
+  .inputContainer {
+    position: relative;
+    width: 95%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .dot {
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    background-color: red;
+    border-radius: 50%;
+   
+  }
+  
+  .searchdiv {
+    width: 87%;
+  }
+  
+  .searchdiv > input {
+    width: 100%;
+    padding: 15px;
+    border: none;
+    outline: none;
+    border-bottom: 2px solid transparent; 
+    transition: border-bottom-color 0.3s ease-in-out;
+  }
+  
+  .searchdiv > input:focus {
+    border-bottom-color: #197cec; 
+  }
+
+  
+  .buttondiv {
+    width: 10%;
+  }
+  
+  .buttondiv > button {
+    width: 100%;
+    padding: 8px;
+    cursor: pointer;
+    outline: none;
+    background-color: #197cec;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    transition: all ease 0.5s;
+  }
+  
+  .buttondiv > button:active {
+    scale: 0.9;
+  }
+  

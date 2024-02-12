@@ -1,0 +1,48 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+  .main{
+    width: 100%;
+  }
+  .headercontainer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .headercontainer div {
+    width: 50%;
+  }
+  
+  .headercontainer button {
+    width: 100%;
+    padding: 15px;
+    border: none;
+    font-family: sans-serif;
+    font-weight: bold;
+    color: #a8a2a2;
+    cursor: pointer;
+    border-bottom: 2px solid transparent; 
+    transition: border-bottom-color 0.3s ease-in-out;
+  }
+  
+  .headercontainer button:hover {
+    color: #000; 
+  }
+  
+  .headercontainer .selected button {
+    color: #000; 
+    border-bottom-color: #197cec; 
+  }
+  .expensecontainer{
+    width: 100%;
+    margin: auto;
+    background-color: #d1d1d1;
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+   padding-top: 10px;
+  }
+  
