@@ -2,8 +2,10 @@ import React, { useState } from 'react';
 import './expense.css';
 import ExpenseNav from './ExpenseNav';
 import { FaTrash } from 'react-icons/fa';
-
+import Modal from 'react-modal';
 const Expense = () => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [selectedExpenseType, setSelectedExpenseType] = useState('')
   const [tableData, setTableData] = useState([
     { slNo: 1, item: '', qty: '', pricePerUnit: '', amount: '' },
   ]);
@@ -41,14 +43,17 @@ const Expense = () => {
     setHoveredRow(null);
   };
 
+
+
   return (
     <div>
       <ExpenseNav />
-      <div className="sub-cont">
+      <div className="sub-cont" style={{border:"1px solid white"}} >
         <div className="header">
-          <div className="expense-cat">
+          <div className="expense-cat" >
             <label htmlFor="">
               <select name="" id="filter">
+                <option value="">+Add Expenses</option>
                 <option value="">Petrol</option>
                 <option value="">Salary</option>
               </select>
@@ -136,10 +141,33 @@ const Expense = () => {
         <div>
           <span>Total</span>
         </div>
+        
         </div>
        
-       
+        <div className="payment">
+          <div>
+            <select name="" id="">
+              <option value="Cash">Cash</option>
+              <option value="Upi">Upi</option>
+            </select>
+            <button className="paymentbtn">Add Payment</button>
+          </div>
+          <div className="select-pay">
+            <div>
+              <input type="checkbox" className="check" />
+              <label htmlFor="" className="round">
+                Round
+              </label>
+              <input type="text" placeholder="0" />
+            </div>
+            <div>
+              <p>Total</p>
+              <input type="text" className="Total" />
+            </div>
+          </div>
+        </div>
       </div>
+     
     </div>
   );
 };

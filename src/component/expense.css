@@ -1,81 +1,126 @@
-.header{
-    margin: auto;
-    margin-top: 3%;
-    width: 90%;
-    display: flex;
-    justify-content: space-between;
-    border: 1px solid;
+.header {
+  margin: auto;
+  margin-top: 3%;
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
 }
-.sub-cont{
-  border: 1px solid;
+.sub-cont {
   background-color: #ececec;
 }
-.expense-cat{
+.expense-cat {
   width: 20%;
-  border: 1px solid;
+
   height: 200px;
 }
-#filter{
+#filter {
   width: 100%;
   padding: 10px;
 }
 
 .table {
-    margin: auto;
-    margin-top: 5%;
-    width: 70%;
-   box-sizing: border-box;
-  
-  }
-/*   
-  table {
-    border-collapse: collapse;
-    width: 100%;
-  }  */
-  
-  thead {
-     
-     margin-right: 30%;
-  }
-  
-  
-  th {
-   
-    padding: 8px; 
-    text-align: left; 
-  }
-  
-  .delete-icon {
-    cursor: pointer;
-    color: red; 
-    margin-left: 5px;
-  }
-  
-  .delete-icon:hover {
-    color: darkred; }
-  
-  .add button{
-    margin-left: 10px;
-  }
+  margin: auto;
+  margin-top: 5%;
+  width: 100%;
 
-  input {
-    border: none;
-    border-bottom: 1px solid #ded8d8; 
-    padding: 5px;
-    outline: none;
-  }
-  
-  
-  /* input:focus {
+  box-sizing: border-box;
+}
+
+.tablediv {
+  width: 90%;
+  margin: auto;
+}
+thead {
+  margin-right: 30%;
+}
+
+tr {
+  width: auto;
+  background-color: white;
+  width: 100%;
+}
+tr:nth-child(2) {
+  width: 100%;
+}
+th {
+  padding: 8px;
+  text-align: left;
+}
+
+.delete-icon {
+  cursor: pointer;
+  color: red;
+  margin-left: 5px;
+}
+
+.delete-icon:hover {
+  color: darkred;
+}
+
+.add button {
+  margin-left: 10px;
+  background-color: white;
+  border: 1px solid #ececec;
+  padding: 10px;
+  color: rgb(54, 121, 221);
+  cursor: pointer;
+}
+
+input {
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid #ded8d8;
+  padding: 5px;
+  outline: none;
+}
+
+/* input:focus {
     border: none;
     border-bottom: 2px solid #197cec;
   } */
-  
 
-  .tbody{
-    display: block;
-  }
-  .bottom{
-    display: flex;
-    justify-content: space-around;
-  }
+.tbody {
+  display: block;
+}
+.bottom {
+  display: flex;
+  justify-content: space-around;
+}
+
+.payment {
+  width: 90%;
+  margin: auto;
+
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+.payment div {
+  width: 18%;
+}
+.payment select {
+  width: 100%;
+  padding: 10px;
+}
+
+.paymentbtn {
+  width: 100%;
+  padding: 6px;
+  margin-top: 15px;
+}
+.select-pay {
+  width: 30%;
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+}
+
+.select-pay div {
+  width: 100%;
+  display: flex;
+  grid-area: 10px;
+}
+.check {
+  width: 10px;
+}
