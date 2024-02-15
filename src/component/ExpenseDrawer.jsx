@@ -4,6 +4,7 @@ import { FaSearch } from "react-icons/fa";
 import { IoIosAddCircleOutline } from "react-icons/io";
 import { BsThreeDotsVertical } from "react-icons/bs";
 import { Link } from 'react-router-dom';
+import ExpenseFooter from './ExpenseFooter';
 
 let productDet = [
   { id: 1, name: "petrol", amt: 0 },
@@ -13,7 +14,7 @@ let productDet = [
   { id: 5, name: "Transport", amt: 0 },
 ];
 
-const ExpenseDrawer = () => {
+const ExpenseDrawer = ({ite}) => {
   const [selectedItemId, setSelectedItemId] = useState(null);
 
   const handleExpense = () => {
@@ -46,24 +47,31 @@ const ExpenseDrawer = () => {
     <div className='drawer' onClick={handleOptionsClose}>
       <div className='drawer-container'>
         <div className='searchbox'>
-          <div>
+          <div style={{marginLeft:"30px", marginTop:"30px"}}>
             <FaSearch />
           </div>
-          <div>
-            <IoIosAddCircleOutline style={{ position: "absolute", marginLeft: "30px", marginTop: "8px", color: "white" }} />
+          <div style={{marginRight:"10px"}}  >
+            <IoIosAddCircleOutline style={{ position: "absolute", marginLeft: "28px", marginTop: "27px", color: "white" }} />
             <Link to="/expense">
               <button onClick={handleExpense}>Add Expense</button>
             </Link>
           </div>
         </div>
-        <div className='cat-amt'>
+       {ite?<div className='cat-amt'>
+          <div>
+            <button>Item</button>
+          </div>
+          <div>
+            <button>Amount</button>
+          </div>
+        </div>: <div className='cat-amt'>
           <div>
             <button>Category</button>
           </div>
           <div>
             <button>Amount</button>
           </div>
-        </div>
+        </div>}
       </div>
 
       {/* Render productDet items */}
@@ -75,14 +83,15 @@ const ExpenseDrawer = () => {
           <div className='options' onClick={handleOptionsClick}>
             <BsThreeDotsVertical onClick={() => handleThreeDotsClick(item.id)} />
             {selectedItemId === item.id && (
-              <div>
-                <button onClick={handleEdit}>Edit</button>
-                <button onClick={handleDelete}>Delete</button>
-              </div>
+               <div className='editdelete' >
+               <button style={{marginTop:"2px" }} onClick={handleEdit}>Edit</button>
+               <button style={{marginTop:"2px" }}   onClick={handleDelete}>Delete</button>
+             </div>
             )}
           </div>
         </div>
       ))}
+   
     </div>
   );
 };

@@ -7,13 +7,15 @@ import MainRoute from './MainRoute';
 import Expense from './component/Expense';
 import ExpenseNav from './component/ExpenseNav';
 
+
 function App() {
   return (
     <div className="App">
-   {/* <Navbar /> */}
+   <Navbar />
    {/* <Header /> */}
   <MainRoute />
   {/* <Expense/> */}
+
  
     </div>
   );

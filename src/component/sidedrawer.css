@@ -75,4 +75,26 @@ border-radius: 15px;
 .prodet > div > p{
     margin-right: 4px;
 }
+.editdelete {
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+    box-sizing: border-box;
+   
+  padding: 2px;
+    width: 50px; 
 
+}
+
+.editdelete button {
+    margin: auto;
+      display: block;
+      gap: 0px;
+    border: none;
+    background-color: white;
+    
+  
+  }
+  .editdelete button:hover{
+    background-color: rgb(191, 211, 218);
+  }
+  

@@ -1,23 +1,16 @@
 import React from 'react'
 import "./category.css"
+import CategoryPageHeader from '../CategoryPageHeader'
 
 
 
-const CategoryPage = () => {
+const CategoryPage = ({ite}) => {
   return (
    
         <div className='details'>
-           <div className='detailscontainer'>
-            <div>
-                <h4>Petrol</h4>
-                <h4>Total : 78.00</h4>
-            </div>
-            <div>
-                <h4>Direct Expense</h4>
-                <h4>Balance : 78.00</h4>
-            </div>
-           </div>
-      <div className='detailsCont'>
+         {ite?"":<CategoryPageHeader />}
+         <div className='detailsCont' style={ite ? {height:"420px"} : {}}>
+
 <div className='prodDet'>
     <div>
         <input type="search" placeholder='Search' />

@@ -3,6 +3,7 @@ import './expense.css';
 import ExpenseNav from './ExpenseNav';
 import { FaTrash } from 'react-icons/fa';
 import Modal from 'react-modal';
+import ExpenseFooter from './ExpenseFooter';
 const Expense = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [selectedExpenseType, setSelectedExpenseType] = useState('')
@@ -52,7 +53,8 @@ const Expense = () => {
         <div className="header">
           <div className="expense-cat" >
             <label htmlFor="">
-              <select name="" id="filter">
+              <select name="Expense category" id="filter">
+              {/* <option value="">Expense category</option> */}
                 <option value="">+Add Expenses</option>
                 <option value="">Petrol</option>
                 <option value="">Salary</option>
@@ -93,37 +95,41 @@ const Expense = () => {
           <tbody className='tbody'>
             {tableData.map((row, index) => (
               <tr key={index}>
-                <td onMouseEnter={() => handleMouseEnter(index)} onMouseLeave={handleMouseLeave}>
-                  {row.slNo}
+                <td style={{width:"226px"}} onMouseEnter={() => handleMouseEnter(index)} onMouseLeave={handleMouseLeave}>
+                <label htmlFor="" >
+                 {row.slNo} 
+                 
                   {hoveredRow === index && (
                     <span className="delete-icon" onClick={() => handleDeleteRow(index)}>
                       <FaTrash />
-                    </span>
-                  )}
+                    </span>)}
+                  </label> 
+                  
                 </td>
-                <td>
+                <td style={{width:"229px"}}>
                   <input
                     type="text"
                     value={row.item}
                     onChange={(e) => handleInputChange(index, 'item', e.target.value)}
                   />
                 </td>
-                <td>
+                <td style={{width:"226px"}}>
                   <input
                     type="text"
                     value={row.qty}
                     onChange={(e) => handleInputChange(index, 'qty', e.target.value)}
                   />
                 </td>
-                <td>
+                <td style={{width:"234px"}}> 
                   <input
                     type="text"
                     value={row.pricePerUnit}
                     onChange={(e) => handleInputChange(index, 'pricePerUnit', e.target.value)}
                   />
                 </td>
-                <td>
+                <td style={{width:"226px"}}>
                   <input
+
                     type="text"
                     value={row.amount}
                     onChange={(e) => handleInputChange(index, 'amount', e.target.value)}
@@ -167,7 +173,7 @@ const Expense = () => {
           </div>
         </div>
       </div>
-     
+     <ExpenseFooter />
     </div>
   );
 };

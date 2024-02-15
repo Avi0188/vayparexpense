@@ -11,6 +11,7 @@ const Item = () => {
   <ExpenseDrawer />
     </div>
     <div className='catcont'>
+      
 <CategoryPage  />
     </div>
     </div>

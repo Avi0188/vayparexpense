@@ -1,3 +1,6 @@
+*{
+  text-decoration: none;
+}
 .header {
   margin: auto;
   margin-top: 3%;
@@ -10,8 +13,8 @@
 }
 .expense-cat {
   width: 20%;
-
-  height: 200px;
+/* border: 1px solid; */
+  height: 100px;
 }
 #filter {
   width: 100%;
@@ -22,7 +25,7 @@
   margin: auto;
   margin-top: 5%;
   width: 100%;
-
+outline: none;
   box-sizing: border-box;
 }
 
